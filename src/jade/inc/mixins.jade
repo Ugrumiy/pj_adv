@@ -1,0 +1,11 @@
+mixin slide-even(caption, text)
+	.slide.slide-even
+		.slide-content
+			p.slide__caption!= caption
+			p.slide__text!= text
+			a(href="#") see more
+
+mixin slide-odd(caption, text)
+	.slide.slide-odd
+		p.slide__caption!= caption
+		a(href="#") see more

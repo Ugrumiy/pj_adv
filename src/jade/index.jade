@@ -1,9 +1,40 @@
 doctype html
 html(lang="en")
 	include ./inc/head.jade
+	include ./inc/mixins.jade
+
 	body
-		h1 Hello World
-		p.
-			I'm fine thank you.And you? 
-			I heard you fell into a lake?That's rather unfortunate. 
-			I hate it when my shoes get <a href="#">wet</a>.
+		header
+			.full-width-container
+				.center-wrapper-container.padded
+					.content
+						.logo
+						.header-search#js_header-search
+							form
+								input(type="text")
+						nav.header-menu
+							ul
+								li.header-menu__item 
+									a(href="#") Home
+								li.header-menu__item 
+									a(href="#") About
+								li.header-menu__item 
+									a(href="#") Service
+								li.header-menu__item 
+									a(href="#") Contact
+								li.header-menu__item 
+									a(href="#") FAQ
+								li.header-menu__item 
+									a(href="#") Support
+		main
+			.full-width-container
+				.slider#js_slider
+					.slider__prev-btn#js_slider__prev-btn
+					.slider__next-btn#js_slider__next-btn
+					.slider__slides
+						+slide-even('ADVENTURER','MURI, A TEMPLATE AT THE HEART OF THE BEAUTY')
+						+slide-odd('Jodi kam kaj caira muri kaitay cao Tailay <br> amAGO ki ar korar asa...')
+
+
+
+
