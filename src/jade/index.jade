@@ -30,10 +30,37 @@ html(lang="en")
 			.full-width-container
 				.slider#js_slider
 					.slider__prev-btn#js_slider__prev-btn
+						.slider__prev-btn-hover
 					.slider__next-btn#js_slider__next-btn
+						.slider__next-btn-hover
 					.slider__slides
 						+slide-even('ADVENTURER','MURI, A TEMPLATE AT THE HEART OF THE BEAUTY')
 						+slide-odd('Jodi kam kaj caira muri kaitay cao Tailay <br> amAGO ki ar korar asa...')
+			.full-width-container
+				.center-wrapper-container.padded
+					.who-we-are-block
+						.block__caption Who we are
+						.who-we-are-block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+						.float-container.clearfix
+							.left-col#js_tabs
+								+tab-item('Lorem ipsum dolor sit amet','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend.</p><p>Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>')
+								+tab-item('Lorem ipsum dolor sit amet','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend.</p><p>Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>',true)
+								+tab-item('Lorem ipsum dolor sit amet','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend.</p><p>Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>')
+							.right-col
+								+progress-bar('Web Design','80')
+								+progress-bar('Html and Css','60')
+								+progress-bar('Graphic Design','75')
+								+progress-bar('Wordpress','90')
+								+progress-bar('Joomla','50')
+								+progress-bar('Php and MysQl','85')
+			.full-width-container
+				.center-wrapper-container.padded
+					.our-service-block
+						.block__caption Our Service
+						.float-container.clearfix
+						+service-offer-item('support','Free support & updates','Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')
+						+service-offer-item('customization','Fully customizable','Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')
+						+service-offer-item('themes','12 theme websites','Lorem ipsum dolor sit amet, conse tetuer adipiscing elit, sed diam nonu my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.')
 
 
 

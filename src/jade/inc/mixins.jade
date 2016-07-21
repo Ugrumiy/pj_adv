@@ -9,3 +9,25 @@ mixin slide-odd(caption, text)
 	.slide.slide-odd
 		p.slide__caption!= caption
 		a(href="#") see more
+
+mixin tab-item(headText,bodyText,active)
+	div(class=active ? 'tab-item js_tab-item active' : 'tab-item js_tab-item') 
+		.tab-head
+			.tab-head__text= headText
+			.tab-head__active-indicator
+		.tab-body.js_tab-body!= bodyText
+
+mixin progress-bar(text, percentage)
+	.progress-bar
+		.progress-bar__outer
+			.progress-bar__inner(style={width: percentage +'%'})
+				span.progress-bar__text= text + " "
+				span.progress-bar__percentage= percentage + "%"
+
+mixin service-offer-item(className, caption, text)
+	div(class = 'our-service-item' + ' ' + className)
+		.our-service-item__icon
+			.our-service-item__icon-hover
+		.our-service-item__caption= caption
+		.our-service-item__text= text
+		a(href="#") see more

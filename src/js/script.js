@@ -5,6 +5,18 @@ $(document).ready(function(){
   		nextArrow: $('#js_slider__next-btn')
   	});
 
+  	var tabs = $('#js_tabs');
+  	var tabItems= tabs.find('.js_tab-item');
+  	var tabBodies = tabs.find('.js_tab-body');
+  	tabItems.on('click', function(){
+  		if (!$(this).hasClass('active')){
+  			tabItems.removeClass('active');
+  			$(this).addClass('active');
+  			tabBodies.slideUp(300);
+  			$(this).find('.js_tab-body').slideDown(300);
+  		}
+  	})
+
 
 
   	var showSearchBtn = $('#js_header-search');

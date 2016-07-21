@@ -1,7 +1,7 @@
 @import "inc/reset.less";
 @import "inc/mixins.less";
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,400italic,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,600,400);
 
 @brand-grey: #3f444a;
@@ -102,7 +102,7 @@ header .content{
 	.logo{
 		height: 100%;
 		width: 192px;
-		background: red;
+		background: url('../img/logo.png') 0 30px no-repeat;
 		float: left;
 	}
 	.header-menu{
@@ -132,9 +132,6 @@ header .content{
 		height: 100%;
 		width: 80px;
 		background: url('../img/search_icon.png') 25px 25px no-repeat;
-		form{
-			
-		}
 		input{
 			width: 0;
 			position: absolute;
@@ -158,21 +155,44 @@ header .content{
 		width: 60px;
 		height: 60px;
 		display: block;
-		background: red;
 		position: absolute;
 		top: 50%;
-		margin-top: - 30px;
+		margin-top: -30px;
 		z-index: 2;
+		background:	url('../img/slider-btns-sprite.png') 0 0 no-repeat;
 		.border-radius(30px);
+		.slider__prev-btn-hover,
+		.slider__next-btn-hover {
+			width: 100%;
+			height: 100%;
+			background:	url('../img/slider-btns-sprite.png') 0 0 no-repeat;
+			.transition(opacity 0.3s ease);
+		}
 	}
 	.slider__prev-btn{
 		left: 5%;
+		background-position: 0px 0px;
+		.slider__prev-btn-hover{
+			background-position: 0px -67px;
+			opacity: 0;
+			&:hover{
+				opacity: 1;
+			}
+		}
 	}
 	.slider__next-btn{
 		right: 5%;
+		background-position: -71px 0px;
+		.slider__next-btn-hover{
+			background-position: -71px -67px;
+			opacity: 0;
+			&:hover{
+				opacity: 1;
+			}
+		}
 	}
 	.slide{
-		box-sizing: border-box;
+		.box-sizing(border-box);
 		min-height: 780px;
 		text-align: center;
 		&.slide-even{
@@ -218,6 +238,237 @@ header .content{
 			margin: 50px 0 0 0;
 			.link-colors(#fff,#fff);
 			.btn(@brand-pink, @brand-grey);
+		}
+	}
+}
+
+.block__caption{
+	color: @brand-grey;
+	font-size: 40px;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.who-we-are-block{
+	.who-we-are-block__text{
+		color: #5c6873;
+		font-size: 18px;
+		text-align: center;
+		font-weight: 300;
+	}
+	.left-col{
+		float:left;
+		width: 48%;
+		margin-right: 2%
+	}
+	.right-col{
+		float:right;
+		width: 48%;
+	}
+	.tab-item{
+		width: 100%;
+		.tab-head{
+			cursor: pointer;
+			.box-sizing(border-box);
+			position: relative;
+			width: 100%;
+			height: 58px;
+			padding-left: 35px;
+			border: 1px solid #c4c4c4;
+			.border-radius(3px);
+			background: @brand-grey;
+		}
+		.tab-head__text{
+			font-size: 16px;
+			color: #fff;
+			line-height: 58px;
+		}
+		.tab-head__active-indicator{
+			height: 35px;
+			width: 35px;
+			position: absolute;
+			background: #6a6e72;
+			top: 12px;
+			right: 12px;
+			.border-radius(18px);
+			&:before{
+				content: '+';
+				height: 25px;
+				width: 25px;
+				.border-radius(13px);
+				background: #afafaf;
+			    z-index: 2;
+			    position: absolute;
+			    top: 5px;
+			    left: 5px;
+			    font-family: 'Open Sans', sans-serif;
+			    font-size: 21px;
+			    line-height: 23px;
+			    text-align: center;
+			    color: #fff;
+			}
+			&:after{
+			    content: '';
+			    height: 8px;
+			    width: 19px;
+			    background: #afafaf;
+			    z-index: 2;
+			    position: absolute;
+			    top: 14px;
+			    right: -12px;
+			}
+		}
+		.tab-body{
+			padding: 30px 23px;
+			margin-top: -1px;
+			border: 1px solid #c4c4c4;
+			.border-radius(3px);
+			display: none;
+			p {
+				font-size: 14px;
+				line-height: 20px;
+				color: #323232;
+			}
+		}
+		&.active{
+			.tab-head{
+				background: @brand-pink;
+			}
+			.tab-head__active-indicator{
+			background: #fff;
+			top: 12px;
+			right: 12px;
+			.border-radius(18px);
+			&:before{
+				content: '-';
+			    top: 5px;
+			    left: 5px;
+			    line-height: 19px;
+			    font-size: 30px;
+			    text-align: center;
+			    color: #fff;
+			    background: @brand-pink;
+			}
+			&:after{
+			    background: #afafaf;
+			    z-index: 2;
+			    width: 15px;
+			    position: absolute;
+			    top: 14px;
+			    right: -13px;
+			    background: #fff;
+			}
+		}
+		}
+	}
+}
+.progress-bar{
+	width: 100%;
+	height: 30px;
+    margin-bottom: 27px;
+	.progress-bar__outer{
+		width: 100%;
+		height: 100%;
+		background: #f2f2f2;
+		border: 1px solid #d7d7d7;
+		.border-radius(3px);
+	}
+	.progress-bar__inner{
+		.box-sizing(border-box);
+		padding-left: 15px;
+		width: 100%;
+		height: 100%;
+		background: @brand-pink;
+		width: 70%;
+	}
+	.progress-bar__text,
+	.progress-bar__percentage{
+		color: #fff;
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+
+.our-service-item{
+	padding: 30px 25px;
+	position: relative;
+	width: 330px;
+	min-height: 460px;
+	float: left;
+	border: 1px solid #dbdbdb;
+	.transition(all 0.6s ease);
+	.border-radius(12px);
+	.our-service-item__icon{
+		position: relative;
+		width: 90px;
+		height: 90px;
+		left:120px;
+		background:	url('../img/services-sprite.png') 0 0 no-repeat;
+
+		&-hover{
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			background:	url('../img/services-sprite.png') 0 0 no-repeat;
+			
+		}
+	}
+	&.support{
+		.our-service-item__icon{
+			background-position: 0 0;
+			&-hover{
+				background-position: 0 -100px;
+			}
+		}
+	}
+	&.customization{
+		.our-service-item__icon{
+			background-position: -110px 0;
+			&-hover{
+				background-position: -110px -100px;
+			}
+		}
+	}
+	&.themes{
+		.our-service-item__icon{
+			background-position: -215px 0;
+			&-hover{
+				background-position: -215px -100px;
+			}
+		}
+	}
+	a{
+		display: inline-block;
+		text-decoration: none;
+		font-family: 'Roboto Condensed', sans-serif;
+		margin: 50px 0 0 0;
+		.link-colors(#fff,#fff);
+		.btn(@brand-pink, @brand-pink + 30%);
+	}
+	.our-service-item__caption{
+		text-transform: uppercase;
+		color: @brand-grey;
+		font-size: 22px;
+		text-align: center;
+		font-weight: 700;
+	}
+	.our-service-item__text{
+		color: @brand-grey;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 300;
+	}
+	&:hover{
+		background: @brand-grey;
+		.our-service-item__icon-hover{
+			opacity: 1;
+		}
+		.our-service-item__caption{
+			color: #ffffff;
+		}
+		.our-service-item__text{
+			color: #ffffff;
 		}
 	}
 }
