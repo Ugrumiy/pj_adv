@@ -31,3 +31,38 @@ mixin service-offer-item(className, caption, text)
 		.our-service-item__caption= caption
 		.our-service-item__text= text
 		a(href="#") see more
+
+mixin offer-item(imgSrc, caption, text)
+	.offer-item
+		div.offer-item__icon-bckg
+			img.offer-item__icon(src=imgSrc)
+		.offer-item__caption= caption
+		.offer-item__text= text	
+
+mixin review-item(imgSrc, reviewersName, reviewersPost, reviewText)
+	.review-item
+		img.review-item__icon(src=imgSrc)
+		.review-item__name= reviewersName
+		.review-item__post= reviewersPost	
+		.review-item__text= reviewText	
+
+mixin stat-item(imgSrc, caption, captionSmall)
+	.stat-item
+		.stat-item__icon
+			img(src=imgSrc)
+		.stat-item__caption= caption
+		.stat-item__caption-small= captionSmall
+
+mixin our-works__preview-item(previewPicSrc, fullPicSrc, projectSiteLink, projectName, projectText)
+	.our-works__preview-item
+		.preview-pic-container
+			img(src=previewPicSrc)
+			.preview-pic-overlay.js_preview-pic-overlay
+				a.preview-pic-overlay__icon-normal.show-full-pic.fancybox(href=fullPicSrc)
+					.preview-pic-overlay__icon-hover-container
+						.preview-pic-overlay__icon-hover
+				a.preview-pic-overlay__icon-normal.goto-project-site(href=projectSiteLink)
+					.preview-pic-overlay__icon-hover-container
+						.preview-pic-overlay__icon-hover
+		.project-name= projectName
+		.project-text= projectText
