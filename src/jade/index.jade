@@ -14,7 +14,7 @@ html(lang="en")
 								input(type="text")
 						nav.header-menu
 							ul
-								li.header-menu__item 
+								li.header-menu__item.active
 									a(href="#") Home
 								li.header-menu__item 
 									a(href="#") About
@@ -40,7 +40,7 @@ html(lang="en")
 				.center-wrapper-container.padded
 					.who-we-are-block
 						.block__caption Who we are
-						.who-we-are-block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+						.who-we-are-block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's<br> standard dummy text ever since the 1500s.
 						.float-container.clearfix
 							.left-col#js_tabs
 								+tab-item('Lorem ipsum dolor sit amet','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend.</p><p>Ut urna dui, interdum non blandit sed, hendrerit ultricies mi. Aliquam at scelerisque ligula. Curabitur id laoreet velit.</p>')
@@ -66,40 +66,40 @@ html(lang="en")
 						.join-us-block__icon
 						.block__caption.white Join Our Creative company
 						.join-us-block__text “Hello! Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore magna aliquam erat volutpat.”
-						a(href="#") Join With Us
+						a(href="#") Join Us
 			.full-width-container
 				.center-wrapper-container.padded
 					.block__caption What we Offer
 					.float-container.offers.clearfix
 						.left-col
-							+offer-item('img/offer-item_pic.png', 'technical analysis', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-							+offer-item('img/offer-item_pic.png', 'Consultation', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+							+offer-item('img/technical-analysis_icon.png', 'Technical analysis', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+							+offer-item('img/consultation_icon.png', 'Consultation', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
 						.right-col
-							+offer-item('img/offer-item_pic.png', 'General contract', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-							+offer-item('img/offer-item_pic.png', '24/7 full support', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+							+offer-item('img/general-contract_icon.png', 'General contract', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+							+offer-item('img/full-support_icon.png', '24/7 full support', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
 			.full-width-container
 				.block__caption CUSTOMER REVIEWS
 				.review-slider#js_review-slider
 					.slide
-						+review-item('img/reviewers-photo_icon.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
-						+review-item('img/reviewers-photo_icon.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_1.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_2.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
 					.slide
-						+review-item('img/reviewers-photo_icon.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
-						+review-item('img/reviewers-photo_icon.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_2.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_1.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
 					.slide
-						+review-item('img/reviewers-photo_icon.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
-						+review-item('img/reviewers-photo_icon.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_2.png', 'Ejazul islam', 'Diploma In mati bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
+						+review-item('img/reviewers-photo_icon_1.png', 'Iqball Hossain', 'Psd at koitor bidda', '“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s”.......')
 				.review-slider__dots#js_review-slider__dots
 			.full-width-container.stats-block
 				.center-wrapper-container.padded
 					.float-container.stats.clearfix
 						+stat-item('img/stats-heart_icon.png','10K+','love our team')
 						+stat-item('img/stats-check_icon.png','400+','check our site')
-						+stat-item('img/stats-repeat_icon.png','312','repeat client')
+						+stat-item('img/stats-repeat_icon.png','312','return clients')
 						+stat-item('img/stats-beer_icon.png','480','pizzas ordered')
 			.full-width-container
 				.center-wrapper-container.padded
-					.block__caption CUSTOMER REVIEWS
+					.block__caption Our Awesome Works
 					.our-works-block__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 					.tabulator#js_tabulator
 						ul.tabulator__tab-list
@@ -111,39 +111,39 @@ html(lang="en")
 						.tabulator__tab-content
 							.tab-content-item.js_tab-content-item.active.clearfix
 								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 01', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 02', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 03', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 04', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 05', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 06', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_2.jpg', 'img/portfolio-item-pic_2.jpg', '#', 'Our Work Image 02', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_3.jpg', 'img/portfolio-item-pic_3.jpg', '#', 'Our Work Image 03', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_4.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 04', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_5.jpg', 'img/portfolio-item-pic_5.jpg', '#', 'Our Work Image 05', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_6.jpg', 'img/portfolio-item-pic_6.jpg', '#', 'Our Work Image 06', 'Lorem ipsum dolor sit amet, consectetur')
 							.tab-content-item.js_tab-content-item.clearfix
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 07', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 08', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 09', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 10', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_3.jpg', 'img/portfolio-item-pic_3.jpg', '#', 'Our Work Image 07', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_5.jpg', 'img/portfolio-item-pic_5.jpg', '#', 'Our Work Image 08', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_6.jpg', 'img/portfolio-item-pic_6.jpg', '#', 'Our Work Image 09', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_2.jpg', 'img/portfolio-item-pic_2.jpg', '#', 'Our Work Image 10', 'Lorem ipsum dolor sit amet, consectetur')
 								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 11', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 12', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_4.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 12', 'Lorem ipsum dolor sit amet, consectetur')
 							.tab-content-item.js_tab-content-item.clearfix
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 13', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 02', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 03', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 04', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 05', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 06', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_6.jpg', 'img/portfolio-item-pic_6.jpg', '#', 'Our Work Image 13', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_5.jpg', 'img/portfolio-item-pic_5.jpg', '#', 'Our Work Image 14', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_4.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 15', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_3.jpg', 'img/portfolio-item-pic_3.jpg', '#', 'Our Work Image 16', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_2.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 17', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 18', 'Lorem ipsum dolor sit amet, consectetur')
 							.tab-content-item.js_tab-content-item.clearfix
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 20', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 02', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 03', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 04', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 05', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 06', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_4.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 19', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 21', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_2.jpg', 'img/portfolio-item-pic_2.jpg', '#', 'Our Work Image 22', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_6.jpg', 'img/portfolio-item-pic_6.jpg', '#', 'Our Work Image 23', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_5.jpg', 'img/portfolio-item-pic_5.jpg', '#', 'Our Work Image 24', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_3.jpg', 'img/portfolio-item-pic_3.jpg', '#', 'Our Work Image 25', 'Lorem ipsum dolor sit amet, consectetur')
 							.tab-content-item.js_tab-content-item.clearfix
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 20', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 02', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 03', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 04', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 05', 'Lorem ipsum dolor sit amet, consectetur')
-								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 06', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_2.jpg', 'img/portfolio-item-pic_2.jpg', '#', 'Our Work Image 26', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_1.jpg', 'img/portfolio-item-pic_1.jpg', '#', 'Our Work Image 27', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_3.jpg', 'img/portfolio-item-pic_3.jpg', '#', 'Our Work Image 28', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_5.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 29', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_6.jpg', 'img/portfolio-item-pic_5.jpg', '#', 'Our Work Image 30', 'Lorem ipsum dolor sit amet, consectetur')
+								+our-works__preview-item('img/portfolio-item-pic_4.jpg', 'img/portfolio-item-pic_4.jpg', '#', 'Our Work Image 31', 'Lorem ipsum dolor sit amet, consectetur')
 			footer
 				.full-width-container.subscribe-block
 					.center-wrapper-container.padded
@@ -152,46 +152,54 @@ html(lang="en")
 								p Subscribe to our newsletter to get every Notify
 							.right-col
 								form.subscribe-form
-									input(type='text')
-									input(type='submit')
+									input(type='text', placeholder='Your email')
+									input(type='submit', value='')
 				.full-width-container.footer-misc
 					.center-wrapper-container.padded
 						.float-container.clearfix
 							.column.about
 								.logo
 								p.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-
 								p.text The point of using Lorem Ipsum is that it has a more-or-less normal.
 								ul.social-links
-									li.social-link.fb
-									li.social-link.gp
-									li.social-link.tw
-									li.social-link.vim
-									li.social-link.linin
+									li.social-links-item.fb
+										a(href="#")
+									li.social-links-item.gp
+										a(href="#")
+									li.social-links-item.tw
+										a(href="#")
+									li.social-links-item.vim
+										a(href="#")
+									li.social-links-item.linin
+										a(href="#")
 							.column.features
 								.column-title Some Features
 								ul.feature-list
-									li.feature-item Lorem ipsum dolor sit amet
-									li.feature-item Aliquam tincidunt cons ectetuer 
-									li.feature-item Vestibulum auctor dapibus con
-									li.feature-item Lorem ipsum dolor sit amet<br>auctor dapibus
+									li.feature-item.text Lorem ipsum dolor sit amet
+									li.feature-item.text Aliquam tincidunt cons ectetuer 
+									li.feature-item.text Vestibulum auctor dapibus con
+									li.feature-item.text Lorem ipsum dolor sit amet<br>auctor dapibus
 							.column.tags.clearfix
-									a.tag-item(href=#) Corporate
-									a.tag-item(href=#) Agency
-									a.tag-item(href=#) Portfolio
-									a.tag-item(href=#) Blog
-									a.tag-item(href=#) Elegant
-									a.tag-item(href=#) Professional
-									a.tag-item(href=#) Business
-							.column.flicker-posts.clearfix
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
-								a.flicker-posts-item(href=#)
+								.column-title Tags
+								a.tag-item(href="#") Corporate
+								a.tag-item(href="#") Agency
+								a.tag-item(href="#") Portfolio
+								a.tag-item(href="#") Blog
+								a.tag-item(href="#") Elegant
+								a.tag-item(href="#") Professional
+								a.tag-item(href="#") Business
+							.column.flickr-posts.clearfix
+								.column-title Flickr Posts
+								+flickr-post-link('#','img/flickr/flickr-post_icon_01.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_02.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_03.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_04.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_05.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_06.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_07.jpg')
+								+flickr-post-link('#','img/flickr/flickr-post_icon_08.jpg')
+				.full-width-container.copyright-block
+					.center-wrapper-container.padded
 						.copyright  © 2015 loran Kha. All Rights Reserved. 
 
 

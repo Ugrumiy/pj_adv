@@ -20,6 +20,9 @@ $(document).ready(function(){
 	var tabs = $('#js_tabs');
 	var tabItems= tabs.find('.js_tab-item');
 	var tabBodies = tabs.find('.js_tab-body');
+
+  tabItems.filter('.active').find('.js_tab-body').slideDown(300);
+
 	tabItems.on('click', function(){
 		if (!$(this).hasClass('active')){
 			tabItems.removeClass('active');
@@ -62,6 +65,12 @@ function initTabulator(tabulator){
 initTabulator($('#js_tabulator'));
 
 $(".fancybox").fancybox();
+
+$(window).on('scroll',function(){
+  if ($(window).scrollTop() > 100){
+    $('.progress-bar').addClass('page-loaded')
+  }
+})
 
 });
 
