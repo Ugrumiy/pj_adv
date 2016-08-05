@@ -152,6 +152,23 @@ header .content{
 			&.active{
 				width: 100px;
 			}
+			@media  (max-width: 1400px) {
+				.box-sizing(border-box);
+			    height: 35px;
+			    width: 0px;
+			    padding: 10px;
+			    border: 2px solid #ec4848;
+			    background: #fff;
+			    right: 22px;
+			    left: auto;
+			    top: 60px;
+    			z-index: 2;
+    			visibility: hidden;
+				&.active{
+				width: 130px;
+				visibility: visible;
+			}
+			}
 		}
 	}
 }
@@ -575,66 +592,66 @@ header .content{
 	}
 }
 .review-item{
-		.box-sizing(border-box);
-		position: relative;
-	    padding-left: 270px;
-	    width: 55%;
-		margin: 0 auto;
-		height: 135px;
-		&:first-child{
-			margin-bottom: 50px;
-		}
-		&__icon{
-			position: absolute;
-			top:0;
-			left: 110px;
-			width: 120px;
-			height: 120px;
-		}
-		&__name{
-		    margin-top: 10px;
-			color: @brand-grey;
-			font-size: 25px;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
-		&__post{
-		   	margin-bottom: 25px;
-			color: @brand-pink;
-			font-size: 14px;
-			line-height: 25px;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
-		&__text{
-			color: @brand-grey;
-			font-size: 18px;
-			line-height: 25px;
-			font-weight: 300;
-		}
+	.box-sizing(border-box);
+	position: relative;
+    padding-left: 270px;
+    width: 55%;
+	margin: 0 auto;
+	height: 160px;
+	&:first-child{
+		margin-bottom: 50px;
 	}
-	.slick-dots{
-		list-style: none;
-		text-align: center;
-		margin-top: 20px;
-		li{
-			margin: 0 5px;
-			cursor: pointer;
-			display: inline-block;
-			height: 13px;
-			width: 13px;
-			border-radius: 50%;
-			background-color: @brand-grey;
-			&.slick-active{
-				background-color: @brand-pink;
-			}
-
-		}
-		button{
-			display: none;
-
-		}
+	&__icon{
+		position: absolute;
+		top:0;
+		left: 110px;
+		width: 120px;
+		height: 120px;
 	}
+	&__name{
+	    margin-top: 10px;
+		color: @brand-grey;
+		font-size: 25px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__post{
+	   	margin-bottom: 25px;
+		color: @brand-pink;
+		font-size: 14px;
+		line-height: 25px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__text{
+		color: @brand-grey;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 300;
+	}
+}
+.slick-dots{
+	list-style: none;
+	text-align: center;
+	margin-top: 20px;
+	li{
+		margin: 0 5px;
+		cursor: pointer;
+		display: inline-block;
+		height: 13px;
+		width: 13px;
+		border-radius: 50%;
+		background-color: @brand-grey;
+		&.slick-active{
+			background-color: @brand-pink;
+		}
+
+	}
+	button{
+		display: none;
+
+	}
+}
 .stats-block{
 	background:	url('../img/stats-block_bg.jpg') 0 0 no-repeat;
 	padding: 55px 0;
